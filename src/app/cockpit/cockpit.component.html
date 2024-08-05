@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xs-12">
+      <p>Add new Servers or blueprints!</p>
+
+      <label>Server Name</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerName">
+
+      <!-- Above is TwoWay data binding which we use to share and recieve data -->
+      <!-- <input type="text" class="form-control"#NameInput> 
+
+       Here we can pass this local reference #NameInput in the function onAddServer() and the onAddBlueprint() function and we cannot use this local reference variable in the typescript file but only here. 
+       We can however write one parameter inside the onAddServer function and log the value there as 
+       onAddServer(nameinput){
+       console.log(nameinput.value)
+       }
+       -->
+
+      
+       <!-- Instead of using two way Data Binding we used the local reference variable
+       Now we can use this variable to pass to function inside the template but cannot use directly inside the Ts file. So we use the @ViewChild to get the reference data into the Ts file.
+
+       We can use either the Component name or the Local reference variable
+       
+    
+       -->
+
+
+
+      <label>Server Content</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerContent">
+      <br>
+
+      <button
+        class="btn btn-secondary"
+        (click)="onAddServer()">Add Server</button>
+
+      <button
+        class="btn btn-secondary"
+        (click)="onAddBlueprint()">Add Blueprint</button>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  
